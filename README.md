@@ -36,3 +36,7 @@ Module deletion is another thing vapetweaker can accomplish<br>
 ```lua
 vapetweaker.DeleteModule("SomeModule")
 ```
+You can also move modules<br>
+```lua
+vapetweaker.MoveModule("SomeModule", vape.Categories.Utility)
+```
