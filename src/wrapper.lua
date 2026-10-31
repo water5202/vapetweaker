@@ -77,6 +77,9 @@ function vapeComponents.RemoveModule(name: string)
 			if Module.Enabled then
 				Module:Toggle()
 			end
+			if Module.Object.Parent:FindFirstChild(Module.Name.."Children") then
+				Module.Object.Parent[Module.Name.."Children"]:Destroy()
+			end
 			Module.Object:Destroy()
 			break
 		end
