@@ -86,7 +86,7 @@ function vapeComponents.RemoveModule(name: string)
 	end
 end
 
-function vapetweaker.removeTags(str)
+function vapeComponents.removeTags(str)
 	str = str:gsub('<br%s*/>', '\n')
 	return (str:gsub('<[^<>]->', ''))
 end
