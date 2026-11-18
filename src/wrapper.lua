@@ -24,7 +24,6 @@ end
 
 vapeComponents = {
     vape = shared.vape,
-    gameCamera = nil,
     whitelist = nil,
     tween = shared.vape.Libraries.tween,
     targetinfo = shared.vape.Libraries.targetinfo,
@@ -49,9 +48,6 @@ vapeComponents.entitylib.start = function()
 		end),
 		playersService.PlayerRemoving:Connect(function(player)
 			vapeComponents.entitylib.removePlayer(player)
-		end),
-		workspace:GetPropertyChangedSignal('CurrentCamera'):Connect(function()
-			vapeComponents.gameCamera = cloneref(workspace.CurrentCamera or workspace:FindFirstChildWhichIsA('Camera') or Instance.new('Camera'))
 		end)
 	}
 
