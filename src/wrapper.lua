@@ -76,6 +76,11 @@ function vapeComponents.RemoveModule(name: string)
 			if Module.Object.Parent:FindFirstChild(Module.Name.."Children") then
 				Module.Object.Parent[Module.Name.."Children"]:Destroy()
 			end
+			for m_name, Module in vapeComponents.vape.Modules do
+				if m_name == name then
+					table.clear(Module)
+				end
+			end
 			Module.Object:Destroy()
 			break
 		end
